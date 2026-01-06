@@ -1,0 +1,8 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+aws_region    = "us-east-1"
+app_name      = "nodejs-demo-app"
+instance_type = "t3.micro"
+key_name      = "your-ssh-key-name"    # REQUIRED: Your AWS SSH key pair name
+ssh_cidr      = "0.0.0.0/0"            # Restrict this to your IP for security
+db_password   = "your-secure-password"  # Change this!
