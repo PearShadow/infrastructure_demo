@@ -13,6 +13,11 @@ systemctl enable docker
 curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
+# Install Docker Buildx (required for docker-compose build)
+mkdir -p /usr/local/lib/docker/cli-plugins
+curl -SL "https://github.com/docker/buildx/releases/download/v0.19.3/buildx-v0.19.3.linux-amd64" -o /usr/local/lib/docker/cli-plugins/docker-buildx
+chmod +x /usr/local/lib/docker/cli-plugins/docker-buildx
+
 # Install git
 yum install -y git
 
